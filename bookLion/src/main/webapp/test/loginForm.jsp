@@ -4,7 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+Mono:wght@600&display=swap"
+	rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
 <style type="text/css">
 * {
 	margin: 0;
@@ -13,6 +19,8 @@
 }
 
 body {
+	font-family: 'Gowun Dodum', sans-serif;
+	font-family: 'Noto Sans Mono', monospace;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,30 +28,45 @@ body {
 
 fieldset {
 	display: flex;
-	border-style: none; 
+	border-style: none;
 }
 
 .button-section {
-
-
+	
 }
 </style>
+<script type="text/javascript">
+	function goJoinUsForm() {
+		location.href = "joinUsForm.jsp";
+	}
+</script>
 </head>
 <body>
-	<div class="container">
-		<fieldset>
-			<form action="">
-				<div>
-					<input type="text" name="id" id="id" placeholder="ID" required="required">
-					<br>
-					<input type="password" name="pwd" id="pwd" placeholder="Password" required="required">
-				</div>
-				<div class="button-section">
-					<button type="submit">Log In</button>
-					<button type="submit">Join Us</button>
-				</div>
-			</form>
-		</fieldset>
-	</div>
-</body>
-</html>
+
+
+
+	<form action="/userTest" method="post">
+		<label>아이디</label> <input type="text" id="userid" name="userid"
+			required="required"> <label>비밀번호</label> <input
+			type="password" id="password" name="password" required="required">
+		<input type="submit" value="로그인"> <input type="submit"
+			value="회원가입">
+	</form>
+
+	<%
+	if (session.getAttribute("userid") != null) {
+	%>
+
+	<p>
+		현재 로그인 상태입니다. 사용자 아이디 :
+		<%=session.getAttribute("userid")%>
+	</p>
+
+
+	<%
+	}
+	%>
+
+
+
+	<jsp:include page="/layout/footer.jsp" />

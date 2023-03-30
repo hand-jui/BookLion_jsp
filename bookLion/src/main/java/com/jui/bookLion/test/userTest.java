@@ -53,7 +53,7 @@ public class userTest extends HttpServlet {
 
 		String action = request.getParameter("action");
 		int responseCount = 0;
-		if (action.equals("inser")) {
+		if (action.equals("insert")) {
 			responseCount = dao.joinUs(dto);
 
 		} else if (action.equals("update")) {

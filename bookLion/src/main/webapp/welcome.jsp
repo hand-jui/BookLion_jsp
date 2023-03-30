@@ -1,157 +1,131 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+<jsp:include page="/layout/header.jsp" />
+<main>
+	<section>
+		<div class="flex-container">
+			<div class="flex-item">
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img alt="세이노의 가르침"
+											src="image/best/b1.jpg"></a></td>
+									<th>세이노의 가르침</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>세이노</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img alt="김미경의 마흔 수업"
+											src="image/best/b2.jpg"></a></td>
+									<th>김미경의 마흔 수업</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>김미경</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img alt="스즈메의 문단속"
+											src="image/best/b3.jpg"></a></td>
+									<th>스즈메의 문단속</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>신카이 마코토</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
 
-body {
-	display: flex;
-	justify-content: center;
-}
 
-.page-container {
-	flex: 1 0 0;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	background-color: aqua;
-	width: 100vh;
-}
+						<td>
 
-header {
-	padding: 20px 20px;
-	justify-content: center;
-	flex-direction: column;
-	background-color: gray;
-	align-items: center;
-	display: flex;
-	flex: 0 0 80px;
-}
-
-.header-top a {
-	width: 100vh;
-	flex: 1;
-	display : flex;
-	justify-content: flex-end;
-}
-
-.header-middle {
-	flex: 2;
-}
-
-.header-bottom {
-	flex: 1;
-}
-
-section {
-	margin: 0;
-	padding: 0;
-	box-sizing: content-box;
-	height: 100vh;
-}
-
-.menu ul {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
-}
-
-.menu a {
-	text-decoration: none;
-	padding: 10px 5px 5px 35px;
-	color: #fff;
-	display: block;
-}
-
-.flex-container {
-	height: 100%;
-	display: flex;
-}
-
-.flex-item {
-	flex: 1;
-	flex-direction: column;
-	display: flex;
-}
-
-.flex-item-child {
-	margin: 100px;
-	padding: 10px;
-	width: 100px;
-	height: 100px;
-	background-color: black;
-	color: white;
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-footer {
-	clear: both;
-	background-color: #030;
-	color: #fff;
-	padding: 10px 0;
-	text-align: center;
-}
-</style>
-</head>
-<body>
-	<div class="page-container">
-		<header>
-			<div class="header-top">
-				<a href="/bookLion/test/loginForm.jsp">로긴</a> 
-				<a href="#">회원가입</a>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img alt="살 때, 팔 때, 벌 때"
+											src="image/best/b4.jpg"></a></td>
+									<th>세이노의 가르침</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>세이노</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img
+											alt="원씽(The One Thing)(리커버 특별판)" src="image/best/b5.jpg"></a></td>
+									<th>김미경의 마흔 수업</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>김미경</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td rowspan="3"><a href="#"><img
+											alt="브라질에 비가 내리면 스타벅스 주식을 사라" src="image/best/b6.jpg"></a></td>
+									<th>스즈메의 문단속</th>
+									<td><a href="#"><span class="material-symbols-rounded">shopping_cart</span></a></td>
+								</tr>
+								<tr>
+									<td><b>신카이 마코토</b> 지음</td>
+									<td><a href="#"><span class="material-symbols-rounded">heart_plus</span></a></td>
+								</tr>
+								<tr>
+									<td>6,480원</td>
+								</tr>
+							</table>
+					</tr>
+					<tr>
+						<td><a href="#"><img alt="불편한 편의점(40만부 기념 벚꽃 에디션)"
+								src="image/best/b7.jpg"></a></td>
+						<td><a href="#"><img alt="심리학이 제갈량에게 말하다 2"
+								src="image/best/b8.jpg"></a></td>
+						<td><a href="#"><img alt="K 배터리 레볼루션"
+								src="image/best/b9.jpg"></a></td>
+					</tr>
+				</table>
 			</div>
-			<div class="header-middle">
-				<img alt="" src="image/main.jpg">
-			</div>
-			<div class="header-bottom">
-				<div class="menu">
-					<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-					</ul>
-				</div>
-			</div>
-		</header>
+		</div>
 
-		<section>
-			<div class="flex-container">
-				<div class="flex-item">
-					<div class="flex-item-child">c-item1</div>
-					<div class="flex-item-child">c-item2</div>
-					<div class="flex-item-child">c-item3</div>
-				</div>
-				<div class="flex-item">
-					<div class="flex-item-child">c-item4</div>
-					<div class="flex-item-child">c-item5</div>
-					<div class="flex-item-child">c-item6</div>
-				</div>
-				<div class="flex-item">
-					<div class="flex-item-child">c-item7</div>
-					<div class="flex-item-child">c-item8</div>
-					<div class="flex-item-child">c-item9</div>
-				</div>
-			</div>
-		</section>
-		<footer>
-			<address>
-				<p>부산 부산진구 중앙대로 749</p>
-				<p>bookLion86@bookLion.com</p>
-			</address>
-			<p>ⓒ BookLion. All rights reserved.</p>
-		</footer>
-	</div>
-</body>
-</html>
+	</section>
+</main>
+<jsp:include page="/layout/footer.jsp" />

@@ -6,7 +6,7 @@ public interface IUserRepo {
 
 	int joinUs(UserDTO dto);
 
-	int logIn();
+	UserDTO logIn(String id, String password);
 
 	int update(UserDTO dto);
 

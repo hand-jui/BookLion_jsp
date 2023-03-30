@@ -2,6 +2,7 @@ package com.jui.bookLion.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.jui.bookLion.dto.UserDTO;
 import com.jui.bookLion.utils.DBHelper;
@@ -47,10 +48,23 @@ public class UserDAO implements IUserRepo {
 	}
 
 	@Override
-	public int logIn() {
-//		String 
-
-		return 0;
+	public UserDTO logIn(String id, String password) {
+		ResultSet rs= null;
+		PreparedStatement pstmt = null;
+		String queryStr = " SELECT * FROM user WHERE id = ? AND password = ? ";
+		try {
+			pstmt = conn.prepareStatement(queryStr);
+			pstmt.setString(1, id);
+			pstmt.setString(2, password);
+			rs = pstmt.executeQuery();
+			String userid = rs.getString("userid"); 
+			if(password.equals("password")) {
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	@Override
