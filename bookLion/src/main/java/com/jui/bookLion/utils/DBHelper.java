@@ -23,6 +23,7 @@ public class DBHelper {
 				conn = DriverManager.getConnection(url, DB_USER_NAME, DB_PASSWORD);
 				System.out.println(">>>DB 연결 완료<<<");
 			} catch (Exception e) {
+				System.out.println("!! DB 연결 오류 !!");
 				e.printStackTrace();
 			}
 		}

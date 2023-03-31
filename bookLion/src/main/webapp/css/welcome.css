@@ -7,14 +7,13 @@
 }
 
 body {
-	height: 100%;
 	flex-direction: column;
 	justify-content: center;
 	display: flex;
 }
 
 header {
-	flex: 0 0 80px;
+	flex: 1 0 160px;
 	display: flex;
 	/* align-items: center;*/
 	align-items: flex-end;
@@ -50,6 +49,10 @@ header {
 	display: flex;
 	justify-content: center;
 	flex: 1;
+}
+
+main {
+	flex: 8;
 }
 
 section {
@@ -89,6 +92,13 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.f_wrap {
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
 }
 
 footer {

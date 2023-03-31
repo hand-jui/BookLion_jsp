@@ -11,6 +11,7 @@ public class UserDAO implements IUserRepo {
 
 	private DBHelper dbHelper;
 	private Connection conn;
+	private PreparedStatement pstmt;
 
 	public UserDAO() {
 		dbHelper = new DBHelper();
@@ -20,7 +21,6 @@ public class UserDAO implements IUserRepo {
 	@Override
 	public int joinUs(UserDTO dto) {
 		int resultCount = 0;
-		PreparedStatement pstmt = null;
 		String queryStr = " INSERT INTO user(id, password, name, address, phone, email, birth, account) "
 				+ " VALUE(?, ?, ?, ?, ?, ?, ?, ?) ";
 		try {
@@ -50,7 +50,6 @@ public class UserDAO implements IUserRepo {
 	@Override
 	public UserDTO logIn(String id, String password) {
 		ResultSet rs= null;
-		PreparedStatement pstmt = null;
 		String queryStr = " SELECT * FROM user WHERE id = ? AND password = ? ";
 		try {
 			pstmt = conn.prepareStatement(queryStr);
@@ -70,7 +69,6 @@ public class UserDAO implements IUserRepo {
 	@Override
 	public int update(UserDTO dto) {
 		int resultCount = 0;
-		PreparedStatement pstmt = null;
 		String queryStr = " UPDATE user SET password = ?, address = ?, phone = ?, email = ?, account = ? WHERE id = ? AND password = ? ";
 		try {
 			pstmt = conn.prepareStatement(queryStr);
@@ -98,7 +96,6 @@ public class UserDAO implements IUserRepo {
 	@Override
 	public int delete(String id, String password) {
 		int resultCount = 0;
-		PreparedStatement pstmt = null;
 		String queryStr = " DELETE FROM user WHERE id = ? AND password = ? ";
 		try {
 			pstmt = conn.prepareStatement(queryStr);
